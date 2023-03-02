@@ -1,1 +1,1 @@
-web: gunicorn naijanetherlandswsgi
+web: gunicorn naijanetherlands.wsgi
