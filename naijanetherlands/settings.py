@@ -13,7 +13,6 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '701@uj&t2v8pm109_iqde$t%@8cve%i5va(1iz*@1$5r$*_ef-')
 
@@ -34,6 +33,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'blog',
 ]
 
