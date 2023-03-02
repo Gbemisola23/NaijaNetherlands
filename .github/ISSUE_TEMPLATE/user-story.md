@@ -1,10 +1,10 @@
 ---
 name: User Story
 about: This is our default user story
-title: "<User Story> Title"
+title: ''
 labels: ''
 assignees: ''
 
 ---
 
-As a ** site user** I can ** capability** so I can **view**
+As a **user** I **can**
