@@ -7,8 +7,9 @@
     <title>NaijaNetherlands</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,7 +25,7 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand"><span
                 class="green-n">Naija</span> <span class="thin">|Netherlands</span></a>
@@ -33,7 +34,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -48,11 +49,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">About</a>
+                    </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    Life as a Nigerian Expat.
-                </span>
             </div>
         </div>
     </nav>
@@ -70,36 +71,7 @@
         </div>
     </div>
 
-    <!-- Showcase -->
-    <section
-      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
-    >
-      <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-between">
-          <div>
-            <h1>Become an <span class="text-warning"> Informed Expat</span></h1>
-            <p class="lead my-4">
-              We focus on bringing you the relevant information needed to thrive
-              and enjoy the full benefits of living in the Netherlands.
-            </p>
-            <button
-              class="btn btn-primary btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#enroll"
-            >
-              Read more
-            </button>
-          </div>
-          <img
-            class="img-fluid w-50 d-none d-sm-block"
-            src="https://res.cloudinary.com/dcnr4coqr/image/upload/v1678230353/happy-young-busiensswoman-at-the-meeting-picture-id1226834422-750x450_djtw0j.jpg"
-            alt="black professional"
-          />
-        </div>
-      </div>
-    </section>
-
-
+   
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
