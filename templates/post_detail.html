@@ -52,6 +52,7 @@
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
+
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="fa fa-comments"></i>
@@ -81,6 +82,23 @@
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
+                            {% if user.id == comment.author or user.id == post.author %}
+                            <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn btn-sm btn-primary dropdown-toggle"
+                                  data-bs-toggle="dropdown"
+                                ></button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a
+                                      href="/delete-comment/{{comment.id}}"
+                                      class="dropdown-item"
+                                      >Delete</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->
@@ -107,6 +125,7 @@
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    
                 </form>
                 {% endif %}
                 {% endif %}
