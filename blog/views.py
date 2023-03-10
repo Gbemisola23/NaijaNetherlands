@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -65,20 +65,23 @@ class PostDetail(View):
             },
         )
 
-def delete_comment(comment_id):
-    comment = Comment.query.filter_by(id=comment_id).first()
 
-    if not comment:
-        flash('Comment does not exist.', category='error')
-    elif current_user.id != comment.author and current_user.id != comment.post.author:
-        flash('You do not have permission to delete this comment.', category='error')
-    else:
-        db.session.delete(comment)
-        db.session.commit()
+class delete_comment(View):
 
-    return render(
-            request, "post_detail.html",
-    )
+    def get(self, request, id, slug, *args, **kwargs):
+        model = Comment
+        comment = Comment.objects.filter(id=id).first()
+
+        if not comment:
+            print("Comment does not exist")
+            # flash('Comment does not exist.', category='error')
+        # elif request.user.id != comment.name and request.user.id != comment.post.author:
+        #     # flash('You do not have permission to delete this comment.', category='error')
+        #     print("You do not have permission to delete this comment.")
+        else:
+            comment.delete()
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 class PostLike(View):

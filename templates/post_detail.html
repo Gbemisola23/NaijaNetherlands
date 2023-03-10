@@ -91,7 +91,7 @@
                                 <ul class="dropdown-menu">
                                   <li>
                                     <a
-                                      href="/delete-comment/{{comment.id}}"
+                                      href="{% url 'delete_comment' post.slug comment.id %}"
                                       class="dropdown-item"
                                       >Delete</a
                                     >

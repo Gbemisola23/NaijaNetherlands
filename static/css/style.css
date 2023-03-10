@@ -1,3 +1,4 @@
+/* Body, nav bar */
 body {
     background-color: #F9FAFC;
     font-family: 'Lobster', cursive;
@@ -38,6 +39,7 @@ body {
     color: black;
 }
 
+/* Card section */
 .card {
     border: none;
     background-color: transparent;
@@ -160,8 +162,3 @@ body {
     border: none;
 }
 
-/* About section */
-.about-text {
-    font-size: 22px;
-    text-align: justify;
-}
