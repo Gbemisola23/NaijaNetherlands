@@ -7,5 +7,4 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
-    path("delete_comment/", views.delete_comment, name='post_detail'),
 ]

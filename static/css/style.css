@@ -161,3 +161,7 @@ body {
 }
 
 /* About section */
+.about-text {
+    font-size: 22px;
+    text-align: justify;
+}

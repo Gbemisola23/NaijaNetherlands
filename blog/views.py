@@ -65,7 +65,6 @@ class PostDetail(View):
             },
         )
 
-
 def delete_comment(comment_id):
     comment = Comment.query.filter_by(id=comment_id).first()
 
