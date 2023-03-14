@@ -1,5 +1,7 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic import (UpdateView)
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm

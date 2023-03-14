@@ -1,13 +1,13 @@
 # NaijaNetherlands
 
 * # Introduction
-    NaijaNetherlands is a full-stack framework and responsive dentist website that allows users to book, cancel, and update their appointments.
-
-    ![responsive image for the site]()
+    NaijaNetherlands is a full-stack framework and responsive blog website that allows users to create, read,update and delete comments on a post.
+    ![responsive image for the site](readme_img/mockup-image.png)
 
 * ## Live Preview   
     * ### For a live preview click: [NaijaNetherlands](https://herokuapp.com/)
 
+* ## Table of Contents
 * [UX](#ux)
     * [Entity Relationship Model](#entity-relationship-model)
     * [Agile Methodology](#agile-methodology)
@@ -46,9 +46,9 @@
 * # UX
 
     * ## Entity Relationship Model
-        * Before I started this project, I created a relationship entity for a Django apps, which helped me determine that what models fields are needed for this project.
+        * Before I started this project, I created a relationship entity for a Django app, which helped me determine what models fields are needed for this project.
 
-            ![website's database diagram](static/images/readme-file-images/Database-diagram.png)
+        ![website's database diagram](readme_img/entity_rel.png)
 
     * ## Agile Methodology
         * This project was created using the agile methodology and github issue boards.
