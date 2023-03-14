@@ -8,12 +8,11 @@
     * ### For a live preview click: [NaijaNetherlands](https://herokuapp.com/)
 
 * ## Table of Contents
+* [SiteGoals](#SiteGoals)
 * [UX](#ux)
     * [Entity Relationship Model](#entity-relationship-model)
     * [Agile Methodology](#agile-methodology)
-    * [Flowchart](#flowchart)
     * [Color Scheme](#color-scheme)
-    * [Fonts Used](#fonts-used)
     * [User Stories](#user-stories)
     * [Admin Stories](#admin-stories)
     * [Wireframes](#wireframes)
@@ -43,6 +42,11 @@
 * [Credits](#credits)
 
 
+* # Site Goals
+ The goal of the site is to give Nigerian expats the relevant information needed to live susutainably in the Netherlands through blog posts.
+ Users of the site shold easily read blog posts and comment on the different posts.
+
+
 * # UX
 
     * ## Entity Relationship Model
@@ -53,30 +57,35 @@
     * ## Agile Methodology
         * This project was created using the agile methodology and github issue boards.
 
-            ![agile methodology for the website](static/imagg)
+            ![agile methodology for the website](readme_img/agile_issues.png)
 
-            ![github issue boards](static/images/readme-fileg)
+            ![github issue boards](readme_img/kaban_board.png)
 
     
     * ## Color Scheme
-        * Using Google, I searched what colors are best for the dentist's website and that is user-friendly too, and I decided to go for blueish and greenish tone.
+        * Based on the  goal of the website I decided to use a touch of Nigerian and Netherlands color green, red and white.
+        ![Color Palette](readme_img/colorpallette.png)
 
-
-    * ## Fonts Used
-        * ### To make the website stand out for a UX, multiple fonts were used:
-            
-
-                
     * ## User Stories
-        * As a site user I would like to have an option that, if I'm logged in, so there will be an option for a logout.
-        * As a site user I would like to have a cancel option in my already booked appointments so I can cancel my bookings.
-        * As a site user I would like to have an edit button in my already booked appointment so I can update my details.
+        * As a site user:
+        * I want to read different posts on the site.
+        * I want to comment on the post.
+        * I want to like the comment.
+        * I want to edit the comment.
+        * I want to delete the comment.
+        * I want to sign up, sign in as a user.
+        * I want to login & logout
         
 
     * ## Admin Stories 
-        * As a site admin I would like to add treatments option inside the booking form using treatments models.
-        * As a site admin I would like to add an approval option so that I can be control of users appointment approvel request.
-        *
+        * As a site admin:
+        * I want to create drafts.
+        * I want to create new post on the website.
+        * I want to read new post.
+        * I want to update a post.
+        * I want to approve comments
+        * I want to delete comments.
+
     * ## Wireframes
         * Project wireframe was created by using [Balsamiq Wireframes]()
         * You can find a website's wireframe by clicking [wireframe])
