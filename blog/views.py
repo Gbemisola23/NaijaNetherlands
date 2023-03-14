@@ -68,7 +68,7 @@ class PostDetail(View):
         )
 
 
-class delete_comment(View):
+class DeleteComment(View):
 
     def get(self, request, id, slug, *args, **kwargs):
         model = Comment
