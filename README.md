@@ -97,11 +97,11 @@
     * ## **Home Page**
     * ### **Navigation Bar** 
         * The navigation bar is featured on all the pages on the website. It includes the website name, link to the home page, about page, register and login page.
-        *This allows users to move through the different pages.
+        * This allows users to move through the different pages.
         ![Navbar](readme_img/nav_bar.png)
             
     * ### **Landing Page**  
-        * The landingpage includes a photograph with a text attached to the left. It is fully responsive.
+        * The landing page includes a photograph with a text attached to the left. It is fully responsive.
         * It has a read more button overlay which will work in the future. 
             ![home page image](readme_img/landing_page.png)  
             ![Responsive Navbar](readme_img/responsive_nav.png)
@@ -119,8 +119,9 @@
 
         
    * ### **Registration Page**
+         * New users will be asked to sign in.
          * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
-            ![iSignup](readme_img/signup.png)
+            ![Signup](readme_img/signup.png)
 
        
     * ### **Signin Page**
