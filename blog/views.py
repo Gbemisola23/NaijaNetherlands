@@ -37,7 +37,6 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -67,6 +66,23 @@ class PostDetail(View):
             },
         )
 
+
+class EditComment(View):
+
+    def get(self, request, slug, commentId, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        commentToEdit = comments.filter(id=commentId and email=request.user.email)
+        if not commentToEdit:
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+        ## We need to find a way to send back the "commentToEdit"
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+    def post(self, request, slug, commentId, *args, **kwargs):
+        # Code for the actual comment editing.
+        #
 
 class DeleteComment(View):
 
