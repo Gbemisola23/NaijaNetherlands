@@ -94,7 +94,7 @@
                                   {% if user.is_authenticated and comment.email == user.email and comment.name == user.username %}  
                                   <li>
                                     <a
-                                      href="{% url 'post_detail' post.slug comment.id %}"
+                                      href="{% url 'edit_comment' post.slug comment.id %}"
                                       class="dropdown-item"
                                       >Edit</a
                                     >
