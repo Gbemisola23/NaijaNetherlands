@@ -75,8 +75,8 @@ class PostDetail(View):
 
 class DeleteComment(View):
 
-    def get(self, request, commentId, slug, *args, **kwargs):
-        comment = Comment.objects.filter(id=commentId).first()
+    def get(self, request, commentSlug, slug, *args, **kwargs):
+        comment = Comment.objects.filter(slug=commentSlug).first()
         if (comment and comment.email == request.user.email):
             comment.delete()
 
