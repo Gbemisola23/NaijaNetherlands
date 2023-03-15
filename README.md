@@ -1,7 +1,8 @@
 # NaijaNetherlands
 
 * # Introduction
-    NaijaNetherlands is a full-stack framework and responsive blog website that allows users to create, read,update and delete comments on a post.
+    NaijaNetherlands is a full-stack framework project built using Django, Bootstrap,Python,Html, Css and Javascript
+    This is a blog website designed for Nigerian expats living in Netherlands. They should find useful information that allows them to adjust to the lifestyle in the Netherlands.
     ![responsive image for the site](readme_img/mockup-image.png)
 
 * ## Live Preview   
@@ -87,121 +88,69 @@
         * I want to delete comments.
 
     * ## Wireframes
-        * Project wireframe was created by using [Balsamiq Wireframes]()
-        * You can find a website's wireframe by clicking [wireframe])
+    * Project wireframe was created by using ![wireframe](readme_img/balsamiq_wireframe.png)
+        
 
 
 * # Features 
 
-    * ## **Existing Features**
-    * ### **Header/Nav** 
-        * There is a slight difference between the navigation bar for guest users and logged in users, and both are fully responsive. The navigation bar contains buttons that lead to other pages.
-            * ### Guest User
-                 ![guest user navbar image](static/images/readmr.png)   
-                 ![guest user navbar tablet plain button image]()
-                 ![guest user tablet navbar menu image](static/images/readme-file-images/guest-tablet-navbar-menu.png)
-                
-            * ### Logged In User
-                ![logged in user navbar image](static/images/readme-file-images/bar.png)  
-                ![logged in user navbar tablet plain button image](static/images/readme-ur.png)
-
-    * ### **Home Page**  
-        * The homepage welcomes the user and there is an option button that takes the users directly to the booking page. The user just has to click on the Book Appointment once they register or sign in as the option is available once they enter the site which is a much more straightforward option for an elder generation who might find technology confusing.  
-            ![home page image](stati.png)  
-
-        * The Book Appointment button on home page will require user to `login/register` before they can book an appointment.  
-            ![image for login or register to book appointment home page](sta.png)
-
-        * I have hidden the option to book an appointment for the smaller devices. Due to the size of the screen being too small and ux.  
-            ![image for home page booking btn](static/ima.png)  
+    * ## **Home Page**
+    * ### **Navigation Bar** 
+        * The navigation bar is featured on all the pages on the website. It includes the website name, link to the home page, about page, register and login page.
+        *This allows users to move through the different pages.
+        ![Navbar](readme_img/nav_bar.png)
+            
+    * ### **Landing Page**  
+        * The landingpage includes a photograph with a text attached to the left. It is fully responsive.
+        * It has a read more button overlay which will work in the future. 
+            ![home page image](readme_img/landing_page.png)  
+            ![Responsive Navbar](readme_img/responsive_nav.png)
 
 
-    * ### **Treaments Page**  
-        * The user can meet one of our specialists on the treatment page and choose which treatment they are interested in and for a larger devices, there is an image added next to it.  
-            ![image for treatment specialist](static/ipng)
-
-        * In order to make the site more responsive for smaller devices, I have hidden the image for mobile phones and small tablets.  
-            ![image for treatment specialist for smaller devices](stati
-            )
-
-        * On each bootstrap card, there is an image, title, description, and a price, where user can see all the different treatments listed. which user can click on the price button to get to the book appointment form, and if users are not logged in, they will be asked to `login/register` first.  
-            ![image for treatments cards](static/imag)
+    * ### **Blog Posts**  
+        * There are 6 different blog posts for the user to read through. 
+        * Each post has a title, author and image attached to it with a link to another page. 
+            ![Blog Post](readme_img/blog_posts.png)
  
          
-    * ### **Book Appointment Page**
-        * Guest users will not have access to appointment form, they will be asked to `login/register` first.    
-            ![image for login or register to book appointment treatment page](static)  
+    * ### **About Page**
+        * Users will not have access to appointment form, they will be asked to `login/register` first.    
+            ![About Page](readme_img/about_page.png)  
 
-        * This form was created using the `django-bootstrap-datepicker-plus` library, which made it form look more professional.    
-        * If users are logged in, they can fill out the book appointment form by inputting their details in, however if they are not logged in they will need to `login/register` first to book.    
-            ![image for book appointment form](static/images/r) 
-
-        * The past dates cannot be used to book appointments by the user as I have disabled the option.  
-            ![image for request date inside the booking form](static) 
-
-
-        * Due to the fact that I imported the Treatment model as a `ForignKey` which I created separately for our treatment page, users can access this treatment drop down.  
-            ![image for dropdown treatment option inside the form](static/images) 
-
-        * After submitting, users will be redirected to my booking page, where a pop-up message will display that their request has been submitted and it will be shown for 3 seconds and it will disappear after that.  
-
-            ![image for booking succesfully message](stati)
-
-
-   * ### **Manage-booking Page**
-        * Guest users will not have access to this page. If the user is logged in and they don't have any appointments booked, the page will display that `currently, you do not have any booked appointments` and the book appointment button will be displayed too.  
-            ![image for currently not booked an appointment]()
-
-        * Admin-approved appointments can't be updated or deleted by users. The user will see green text and a tick icon when the admin approves the appointment.   
-            ![image for approved request](static/images/read 
-
-        * When users books an appointment but their request is still pending, they will see a large orange text and a loading time icon, so they can update or delete their appointments. 
-            ![image for pending request]()
+        
+   * ### **Registration Page**
+         * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
+            ![iSignup](readme_img/signup.png)
 
        
-    * ### **Contact Us Page**
+    * ### **Signin Page**
         * Guests and logged in users have access to the contact us page, so users don't need to register or login to send us a message.  
-            ![image for contact us form](static/images/readme-file-imag)
 
-        * After submitting the contact us form successfully, the user will see a pop-up text saying `thanks for contacting us, we'll get back to you as soon as possible`, which will disappear after 3 seconds.  
-            ![image for contact us form meesgae](static/images/reg)
-
-        * If a user is experiencing an emergency dental problem, they can get a free consultation at any 24 hours on a phone call from our dental health specialists who will advise them if there is a need for an emergency appointment or if they need to go to hospital and get their teeth treated.    
-            ![image form emergency supports](static/images/readme-file-images/emergency-supports.png)  
-
-        * Adding the map makes it easier for users to find our location.  
-            ![image for map for our location](static/images/readme-file)  
-
+         * Upon confirming signing in , the user will be logged in the website, and a pop-up model will display the message `You have successfully signed in`, which will disappear after 3 seconds.
+            ![image for signin form](readme_img/signin.png)
+ 
 
     * ### **Logout Page**
-        * `django-allauth` library was used to handel all the messages and errors for `login`, `register` and `logout` page.
+        * `django-allauth` library was used to handle all the messages and errors for `login`, `register` and `logout` page.
         * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to logout.  
-            ![image for sign out page](static/images/re)
 
-        * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.  
-            ![image for sign out message](static/images/rea)
+         * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.
+            ![image for sign out page](readme_img/signout_popup.png)
 
-
-    * ### **Registration Page**
-        * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
-            ![image for sign up page](static/images/readm)
- 
-    * ### **Login Page**
-        * If users are not logged in but they already have an account with the website, they can login from the navbar login button.
-            ![image for login page]()
-
-        * Upon successful login, the user are redirected to the home page and a pop-up message will show up, which says successfully logged in and the message disappears after 3 seconds.  
-            ![image for login successfull message]()
 
     * ### **Footer**  
-        * All the users will have access to the footer section of the page, where they can find information about clinic opening hours, contact support, clinic location, and our social media platforms.
-            ![image for footer for desktop]()
+        * All the users will have access to the footer section of the page, where they can find information on all the social media handles. 
+            ![footer](readme_img/footer.png)
 
-        * I have removed our location from medium and smaller devices for a better user experience.  
-            ![image for footer for tablet] ()
+      * ### **Django admin** 
+      * This is the django admin terminal that allows the admin/author to login with the superuser created.
+       ![django](readme_img/django_interface.png)
 
-            ![image for footer for mobile]()
-    
+        * ### **Django administration** 
+      * This is the django admin terminal that allows the admin/author to create posts/drafts, approve and delete comments.
+       ![django](readme_img/django_adminsite.png)
+
+
 
     * ## **Future Features**
         * A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.  
