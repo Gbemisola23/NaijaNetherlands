@@ -27,7 +27,6 @@
 * [Bugs](#bugs)
     
     * [Fixed Bugs](#fixed-bugs)
-    * [Unfixed Bugs](#unfixed-bugs)
 
 * [Technologies Used](#technologies-used)
 
@@ -106,11 +105,7 @@
         * The landing page includes a photograph with a text attached to the left. It is fully responsive.
         * It has a read more button overlay which will work in the future. 
 
-            ![home page image](readme_img/landing_page.png)  
-
-
-            ![Responsive Navbar](readme_img/responsive_nav.png)
-
+        ![home page image](readme_img/landing_page.png)  
 
     * ### **Blog Posts**  
         * There are 6 different blog posts for the user to read through. 
@@ -348,26 +343,6 @@
         * The next step was `git commit -m "changes I made"` where I confirmed that what changes I want to make.
         * Last but not least, I have typed `git push` to save everything on Github.
 
-
-    * ### Cloning A Repository:
-        * On GitHub.com, navigate to the main page of the repository.
-        * Above the list of files, click download icon which says `Code`.
-
-            ![download repo](static/images/readme-
-
-        * To clone the repository using HTTPS, under "HTTPS", click.
-        * To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click.
-        * To clone a repository using GitHub CLI, click GitHub CLI, then click.
-
-            ![download repo](static/images/re
-
-        * Open Git Bash.
-        * Change the current working directory to the location where you want the cloned directory.
-        * Type git clone, and then paste the URL you copied earlier.
-
-            `$ git clone https://github.com/h
-
-        * Press Enter to create your local clone.
 
 * # Credits
     * ## Content

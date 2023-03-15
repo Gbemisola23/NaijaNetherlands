@@ -84,14 +84,15 @@
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
+
+                            {% if user.is_authenticated and comment.email == user.email and comment.name == user.username %} 
                             <div class="btn-group">
                                 <button
                                   type="button"
                                   class="btn btn-sm btn-primary dropdown-toggle"
                                   data-bs-toggle="dropdown"
                                 ></button>
-                                <ul class="dropdown-menu">
-                                  {% if user.is_authenticated and comment.email == user.email and comment.name == user.username %}  
+                                <ul class="dropdown-menu"> 
                                   <li>
                                     <a
                                       href="{% url 'edit_comment' post.slug comment.id %}"
@@ -99,7 +100,6 @@
                                       >Edit</a
                                     >
                                   </li>
-                                  {% endif %}
                                   <li>
                                     <a
                                       href="{% url 'delete_comment' post.slug comment.id %}"
@@ -109,6 +109,8 @@
                                   </li>
                                 </ul>
                             </div>
+                            {% endif %}
+
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->

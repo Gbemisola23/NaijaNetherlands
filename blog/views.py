@@ -16,13 +16,19 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, slug, commentId=None, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+        
+        commentForm = CommentForm()
+        if commentId:
+            comment = Comment.objects.filter(pk=commentId).first()
+            if (comment and comment.email == request.user.email):
+                commentForm = CommentForm(instance=comment)
 
         return render(
             request,
@@ -32,7 +38,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": commentForm
             },
         )
 
@@ -67,37 +73,11 @@ class PostDetail(View):
         )
 
 
-class EditComment(View):
-
-    def get(self, request, slug, commentId, *args, **kwargs):
-        # model = Comment
-        # commentToEdit = Comment.objects.filter(id=commentId).first()
-        
-        if not commentToEdit:
-            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-        ## We need to find a way to send back the "commentToEdit"
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-    def post(self, request, slug, commentId, *args, **kwargs):
-        # Code for the actual comment editing.
-        #
-        print("Got here")
-
-
 class DeleteComment(View):
 
-    def get(self, request, id, slug, *args, **kwargs):
-        model = Comment
-        comment = Comment.objects.filter(id=id).first()
-
-        if not comment:
-            print("Comment does not exist")
-            # flash('Comment does not exist.', category='error')
-        # elif request.user.id != comment.name and request.user.id != comment.post.author:
-        #     # flash('You do not have permission to delete this comment.', category='error')
-        #     print("You do not have permission to delete this comment.")
-        else:
+    def get(self, request, commentId, slug, *args, **kwargs):
+        comment = Comment.objects.filter(id=commentId).first()
+        if (comment and comment.email == request.user.email):
             comment.delete()
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
