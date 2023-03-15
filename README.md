@@ -65,6 +65,7 @@
     
     * ## Color Scheme
         * Based on the  goal of the website I decided to use a touch of Nigerian and Netherlands color green, red and white.
+
         ![Color Palette](readme_img/colorpallette.png)
 
     * ## User Stories
@@ -98,50 +99,37 @@
     * ### **Navigation Bar** 
         * The navigation bar is featured on all the pages on the website. It includes the website name, link to the home page, about page, register and login page.
         * This allows users to move through the different pages.
+
         ![Navbar](readme_img/nav_bar.png)
             
     * ### **Landing Page**  
         * The landing page includes a photograph with a text attached to the left. It is fully responsive.
         * It has a read more button overlay which will work in the future. 
+
             ![home page image](readme_img/landing_page.png)  
+
+
             ![Responsive Navbar](readme_img/responsive_nav.png)
 
 
     * ### **Blog Posts**  
         * There are 6 different blog posts for the user to read through. 
-        * Each post has a title, author and image attached to it with a link to another page. 
+        * Each post has a title, author,datecreated and a like button attached to it with a link to another page to read the post. 
+
             ![Blog Post](readme_img/blog_posts.png)
- 
-         
-    * ### **About Page**
-        * Users will not have access to appointment form, they will be asked to `login/register` first.    
-            ![About Page](readme_img/about_page.png)  
+    
+    * ### **Comment signin**  
+        * Below the post story the new user is asked to signin/ register before they can leave a comment.
 
-        
-   * ### **Registration Page**
-         * New users will be asked to sign in.
-         * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
-            ![Signup](readme_img/signup.png)
+            ![Comment Signin](readme_img/comment_signin.png)  
 
-       
-    * ### **Signin Page**
-        * Guests and logged in users have access to the contact us page, so users don't need to register or login to send us a message.  
+        * Upon signup/signin the user can leave a comment.
+            ![Comment Signin](readme_img/leave_comment.png)  
 
-         * Upon confirming signing in , the user will be logged in the website, and a pop-up model will display the message `You have successfully signed in`, which will disappear after 3 seconds.
-            ![image for signin form](readme_img/signin.png)
- 
+    * ### **Comment Approval**
+        * There is a notification that shows after the user has submitted a comment.
 
-    * ### **Logout Page**
-        * `django-allauth` library was used to handle all the messages and errors for `login`, `register` and `logout` page.
-        * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to logout.  
-
-         * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.
-            ![image for sign out page](readme_img/signout_popup.png)
-
-
-    * ### **Footer**  
-        * All the users will have access to the footer section of the page, where they can find information on all the social media handles. 
-            ![footer](readme_img/footer.png)
+            ![Comment Approval](readme_img/comment_approval.png)  
 
       * ### **Django admin** 
       * This is the django admin terminal that allows the admin/author to login with the superuser created.
@@ -151,35 +139,62 @@
       * This is the django admin terminal that allows the admin/author to create posts/drafts, approve and delete comments.
        ![django](readme_img/django_adminsite.png)
 
+  
+    * ### **About Page**
+        * Users will not have access to appointment form, they will be asked to `login/register` first.    
+
+            ![About Page](readme_img/about_page.png)  
+
+        
+   * ### **Registration Page**
+        * New users will be asked to sign in.
+        * When users have successfully registered with the website, they will be directed to the home page and see successfully signed in.  
+
+            ![Signup](readme_img/signup.png)
+
+       
+    * ### **Signin Page**
+        * Logged in users have access to the page, so users don't need to register to leave comments. 
+
+        * Upon confirming signing in , the user will be logged in the website, and a pop-up model will display the message `You have successfully signed in`, which will disappear after 3 seconds.
+            ![image for signin form](readme_img/signin.png)
+ 
+
+    * ### **Logout Page**
+        * `django-allauth` library was used to handle all the messages and errors for `login`, `register` and `logout` page.
+        * Logged in users will not see a registration or login button. Instead, they will see a logout button in the navbar, and clicking that will prompt them to confirm that they wish to logout.  
+
+        * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.
+            ![image for sign out page](readme_img/signout_popup.png)
+
+
+    * ### **Footer**  
+        * All the users will have access to the footer section of the page, where they can find information on all the social media handles. 
+            ![footer](readme_img/footer.png)
+
 
 
     * ## **Future Features**
-        * A better login and registration form will be added in the future, and users will only be allowed to register if they verify their email address.  
-
+        * The readmore button will link to the posts.
         * To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook, can sign up by simply clicking on Google or facebook.  
-
-        * In the future, I would like to prevent users from selecting the same treatment option twice. So users will not be able to choose the same treatment again in the booking form.
-
-        * When a user has already booked an appointment, if the date has passed the current date, their appointment will automatically display as expired.
+        * A contact page will be created.
+        * Community groups will be created to allow users in the same provinces conect.
 
 * # Testing
 
-* You can check what testing has been performed for the website by clicking [Testing.md](testings.md)
+*  I have used a combination of manual and automated testing to ensure the website's functionality meets the desired intent.
 
 * # Bugs
 
 * Multiple bugs were encountered during the development stage.
 
     * ### Fixed Bugs
-        * First issue encounterd was the `requested date` field on the `Book Appointment` form, where users entered their details in but as soon as they click on the submit button, the form wouldn't submit. This issue was caused by the UK format date I added to the form widget, because by default it was US notation, so I had remove it to fix the issue.  
-            ![error in formate](static/images/r 
+        * First issue encounterd was the secret key improperly configured.
+        ![secretkey](readme_img/secretkey_empty.png)
+        * Whilst creating the delete comments, I had this issue.
+        ![delete](readme_img/deleteurl_issue.png)
+
         
-      
-
-    * ### Unfixed Bugs
-        * The issue was scrolling down, sometimes the page scrolled down smoothly on my laptop and sometimes the scrolling down panel was visible, but scrolling down wasn't smooth at all. Upon reaching out to tutor and mentor, both of them said their computers/laptops didn't have that sort of problem, so it's probably only my laptop that has this problem.  
-
-
 * # Technologies Used
 
     * ## Languages Used
@@ -225,7 +240,6 @@
         * [Gitpod workspace](https://gitpod.io/workspaces)
         * [Heroku](https://dashboard.heroku.com/apps)
         * [Flowchart](https://lucid.app/documents#/documents?folder_id=home)
-        * [coolors](https://coolors.co/)
         * [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
         * [jshint](https://jshint.com/)
         * [HTML code validator](https://validator.w3.org/)
@@ -234,7 +248,6 @@
         * [Google Fonts](https://fonts.google.com/)
         * [Slack](https://slack.com/intl/en-gb/)
         * [geeksforgeeks](https://www.geeksforgeeks.org/)
-        * [SNYK](https://security.snyk.io/package/npm/moment)
 
 * # Deployments
 * Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
@@ -321,7 +334,7 @@
             media, static, templates
 
         * Create Procfile on the top level directory and inside the file add this:  
-            `web: gunicorn dentist.wsgi`
+            `web: gunicorn naijanetherlands.wsgi`
         
         * before deploying on heroku make sure: 
             `DEBUG = False`
@@ -358,28 +371,20 @@
 
 * # Credits
     * ## Content
-        * `Treatment page` title and description was taken from [dentalhealth.org](https:///) website.  
-        * How to add images, title, description were done using the Django admin panel with help from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
-        * Display a message to a user using bootstrap, this was taken from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
-        * I have taken a little design inspiration from this Django [youtube  tutorial](https://www.) in preparation for this project.
-        * By making this project I had plenty of help from the [Slack](https://slack.com/intl/en-gb/) Community and tutor support.
+         * The post content were taken from these sites:
+         (https://www.expatica.com/nl/living/household/recycling-in-the-netherlands-133948/)
+         (https://allaboutexpats.nl/citizen-service-number/)
+         (https://www.europeanbestdestinations.com/destinations/netherlands/best-places-to-visit-in-the-netherlands/)
+         (https://www.beatrizpaula.com/one-year-living-in-the-netherlands-a-retrospective/)
+
+        * How to create post,postdetail, create comments, likes were done using the Django admin panel with help from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
+
+        * In designing the nav bar and landing page using bootstrap, this was taken from YouTube [Bootstrap Nav](https://www.youtube.com/watch?v=4sosXZsdy-s&t=1584s).
+
+        * How to delete ccomments on a post was taken from this site [youtube tutorial](https://www.youtube.com/watch?v=M_OKJnIdYeU&t=1772s) in preparation for this project.
+        * By making this proj
+        ect I had help from my husband,tutor support and mentor.
         * In order to find a solution to a problem, I often search [Stackoverflow](https://stackoverflow.com/) and [geeksforgeeks](https://www.geeksforgeeks.org/).
-        * In order to give me an idea of how a readme file should look, I looked at some other students project readme files [ladybike](https://github.com/van-essa/ladybike#table-of-contents). 
+        * In order to give me an idea of how a readme file should look, I looked at the Code Institute readmefile on slack, some other students project readme files
+         [daisygunn](https://github.com/daisygunn/grow-restaurant) and [hash](https://github.com/hashim222/hash-dental-care).
 
-
-    * ## Media
-        * Site logo was created using [canva](https://www.canva.com/) website.
-        * Site Images were taken from [pexels](https://www.pexels.com/) website.
-
-
-
-**Bugs**
-
-* I had this error in the process of developing File "/workspace/.pip-modules/lib/python3.8/site-packages/dj_database_url.py", line 80, in parse
-
-**Credits**
-Freepik
-https://www.expatica.com/nl/living/household/recycling-in-the-netherlands-133948/
-https://allaboutexpats.nl/citizen-service-number/
-https://www.europeanbestdestinations.com/destinations/netherlands/best-places-to-visit-in-the-netherlands/
-https://www.beatrizpaula.com/one-year-living-in-the-netherlands-a-retrospective/
