@@ -344,13 +344,16 @@
         * Last but not least, I have typed `git push` to save everything on Github.
 
 
+
 * # Credits
     * ## Content
          * The post content were taken from these sites:
          (https://www.expatica.com/nl/living/household/recycling-in-the-netherlands-133948/)
          (https://allaboutexpats.nl/citizen-service-number/)
+         (https://allaboutexpats.nl/about-the-30-facility/)
          (https://www.europeanbestdestinations.com/destinations/netherlands/best-places-to-visit-in-the-netherlands/)
-         (https://www.beatrizpaula.com/one-year-living-in-the-netherlands-a-retrospective/)
+         (https://www.amsterdamtips.com/ov-chipkaart)
+         (https://www.amsterdam.nl/en/civil-affairs/passport-id/exchange-foreign/)
 
         * How to create post,postdetail, create comments, likes were done using the Django admin panel with help from the Code Institute's [Django blog walkthrough](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) project.
 
