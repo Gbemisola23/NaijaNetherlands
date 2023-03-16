@@ -8,6 +8,9 @@ from .forms import CommentForm
 
 
 class PostList(generic.ListView):
+    """
+    renders the postview
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -15,6 +18,9 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    """
+    Renders the postdetail view
+    """
 
     def get(self, request, slug, commentId=None, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -74,6 +80,9 @@ class PostDetail(View):
 
 
 class DeleteComment(View):
+    """
+    Renders the delete dropdown button
+    """
 
     def get(self, request, commentId, slug, *args, **kwargs):
         comment = Comment.objects.filter(pk=commentId).first()
@@ -84,6 +93,9 @@ class DeleteComment(View):
 
 
 class PostLike(View):
+    """
+    Render the like button
+    """
 
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -96,4 +108,7 @@ class PostLike(View):
 
 
 def about(request):
+    """
+    Render the about page
+    """
     return render(request, "about.html")
