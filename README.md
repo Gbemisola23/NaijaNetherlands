@@ -6,7 +6,7 @@
     ![responsive image for the site](readme_img/mockup-image.png)
 
 * ## Live Preview   
-    * ### For a live preview click: [NaijaNetherlands](https://herokuapp.com/)
+    * ### For a live preview click: [NaijaNetherlands](https://naijanetherlands.herokuapp.com/)
 
 * ## Table of Contents
 * [SiteGoals](#SiteGoals)
