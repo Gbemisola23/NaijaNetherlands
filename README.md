@@ -177,7 +177,7 @@
 
 * # Testing
 
-*  I have used a combination of manual and automated testing to ensure the website's functionality meets the desired intent.
+*  Due to constraints of time I haven't had the time to test to ensure the website's functionality meets the desired intent.
 
 * # Bugs
 
@@ -331,9 +331,13 @@
         * Create Procfile on the top level directory and inside the file add this:  
             `web: gunicorn naijanetherlands.wsgi`
         
+        * X_FRAME_OPTIONS = 'SAMEORIGIN'
+        
         * before deploying on heroku make sure: 
             `DEBUG = False`
             Remove `DISABLE_COLLECTSTATIC` from the config vars.
+        
+
 
 
 * ## Github
@@ -347,7 +351,8 @@
 
 * # Credits
     * ## Content
-         * The post content were taken from these sites:
+         * The post content and images were taken from these sites:
+         https://expatax.nl/30-percent-ruling/
          (https://www.expatica.com/nl/living/household/recycling-in-the-netherlands-133948/)
          (https://allaboutexpats.nl/citizen-service-number/)
          (https://allaboutexpats.nl/about-the-30-facility/)
@@ -360,8 +365,7 @@
         * In designing the nav bar and landing page using bootstrap, this was taken from YouTube [Bootstrap Nav](https://www.youtube.com/watch?v=4sosXZsdy-s&t=1584s).
 
         * How to delete ccomments on a post was taken from this site [youtube tutorial](https://www.youtube.com/watch?v=M_OKJnIdYeU&t=1772s) in preparation for this project.
-        * By making this proj
-        ect I had help from my husband,tutor support and mentor.
+        * By making this project I had help from my husband,tutor support and mentor.
         * In order to find a solution to a problem, I often search [Stackoverflow](https://stackoverflow.com/) and [geeksforgeeks](https://www.geeksforgeeks.org/).
         * In order to give me an idea of how a readme file should look, I looked at the Code Institute readmefile on slack, some other students project readme files
          [daisygunn](https://github.com/daisygunn/grow-restaurant) and [hash](https://github.com/hashim222/hash-dental-care).

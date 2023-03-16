@@ -26,10 +26,10 @@
            </button>
          </div>
          <img
-           class="img-fluid w-50 d-none d-sm-block"
-           src="https://res.cloudinary.com/dcnr4coqr/image/upload/v1678230353/happy-young-busiensswoman-at-the-meeting-picture-id1226834422-750x450_djtw0j.jpg"
-           alt="black professional"
-         />
+            class="img-fluid w-50 d-none d-sm-block"
+            src="https://res.cloudinary.com/dcnr4coqr/image/upload/v1678230353/happy-young-busiensswoman-at-the-meeting-picture-id1226834422-750x450_djtw0j.jpg"
+            alt="businesswoman"
+          >
        </div>
      </div>
    </section>
@@ -48,7 +48,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" 
-                                    src="https://res.cloudinary.com/dcnr4coqr/image/upload/v1678052348/ef3-placeholder-image_q80ez1.jpg" >
+                                    src="https://res.cloudinary.com/dcnr4coqr/image/upload/v1678052348/ef3-placeholder-image_q80ez1.jpg"
+                                    alt="placeholder"
+                                 >
                                 {% else %}
                                 <img class="card-img-top"  src=" {{ post.featured_image.url }}">
                                 {% endif %}
