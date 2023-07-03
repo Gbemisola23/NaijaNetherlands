@@ -43,14 +43,16 @@
 
 
 * # Site Goals
- The goal of the site is to give Nigerian expats the relevant information needed to live susutainably in the Netherlands through blog posts.
+ The goal of the site is to give Nigerian expats the relevant information 
+ needed to live susutainably in the Netherlands through blog posts.
  Users of the site shold easily read blog posts and comment on the different posts.
 
 
 * # UX
 
     * ## Entity Relationship Model
-        * Before I started this project, I created a relationship entity for a Django app, which helped me determine what models fields are needed for this project.
+        * Before I started this project, I created a relationship entity for a Django app,
+         which helped me determine what models fields are needed for this project.
 
         ![website's database diagram](readme_img/entity_rel.png)
 
