@@ -2,7 +2,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import (UpdateView)
+from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm
 
@@ -92,6 +94,7 @@ class DeleteComment(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+
 class PostLike(View):
     """
     Render the like button
@@ -112,3 +115,10 @@ def about(request):
     Render the about page
     """
     return render(request, "about.html")
+
+
+def contactus(request):
+    """
+    Render the contact page
+    """
+    return render(request, template)

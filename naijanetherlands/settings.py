@@ -18,7 +18,7 @@ DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['naijanetherlands.herokuapp.com', "localhost"]
+ALLOWED_HOSTS = ['naijanetherlands.herokuapp.com', '8000-gbemisola23-naijanether-v2047ui2t6b.ws-eu101.gitpod.io', "localhost"]
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'blog',
+    'contactus',
 ]
 
 SITE_ID = 1
