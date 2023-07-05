@@ -138,8 +138,7 @@
 
   
     * ### **About Page**
-        * Users will not have access to appointment form, they will be asked to `login/register` first.    
-
+        * This page describes the intentions of the website.
             ![About Page](readme_img/about_page.png)  
 
         
@@ -163,7 +162,12 @@
 
         * Upon confirming sign out, the user will be logged out from the website, and a pop-up model will display the message `You have signed out`, which will disappear after 3 seconds.
             ![image for sign out page](readme_img/signout_popup.png)
+    
 
+     * ### **Contact Page**
+        * This page is for users to contact the owners of the website for more information.    
+
+            ![Contact Page](readme_img/contact_us.png)  
 
     * ### **Footer**  
         * All the users will have access to the footer section of the page, where they can find information on all the social media handles. 
@@ -172,14 +176,33 @@
 
 
     * ## **Future Features**
-        * The readmore button will link to the posts.
         * To make signing up easier for new users, I would like to add an option of a one-click signup button where users who already have an account with Google or Facebook, can sign up by simply clicking on Google or facebook.  
-        * A contact page will be created.
         * Community groups will be created to allow users in the same provinces conect.
+        * Creating newsletter.
 
-* # Testing
+*# Testing
+## Manual Testing
+ | Feature | Test  | Expected Result | Actual Result |
+| -------------| ----- | ----- | :----: |
+| EBINNATURALS  | Selecting logo on homepage |  directs user back to homepage |  Pass |
+| Navigation Links  | Selecting navigation links |  directs user to relevant pages |  Pass |
+| BlogPost | Selecting blogpost |  directs user to blog page |  Pass |
+| Blog detail | Selecting Blog detail |  directs user to blog detail |  Pass |
+| Leave a Comment when signed in | Submitting comment|  successfully submit and display comment |  Pass |
+| Edit a Comment when signed in | Editing comment|  successfully submit and edit comment |  Pass |
+| Delete a Comment when signed in | Deleting comment|  successfully deleted comment |  Pass |
+| Add blog | Adding a new blog | successfully add new blog to blog page  |  Pass |
+| As Admin edit blog | editing blog|  successfully edited the blog |  Pass |
+| As Admin Delete Comment | Deleting comment|  successfully remove comment |  Pass |
+| Contact | Selecting Contact | directs user to contact page  |  Pass |
+| Contact form submission | submitting contact form | successfully sends submit form and can seen be in admin |  Pass |
+| Register | Register for an account | selecting Register in my account directs user signup page |  Pass |
+| Register | Registering as a new user | Registering as a new user form works |  Pass |
+| Login | Login to an account | selecting Login in my account directs user to Login page |  Pass |
+| Login | Login to an account | login-in as a new user form works |  Pass |
+| Login as admin| Login to as admin gives access to blog/product management | login-in as a new user form works |  Pass |
+| Logout | message shown | Logging out message shown |  Pass |
 
-*  Due to constraints of time I haven't had the time to test to ensure the website's functionality meets the desired intent.
 
 * # Bugs
 
@@ -190,6 +213,8 @@
         ![secretkey](readme_img/secretkey_empty.png)
         * Whilst creating the delete comments, I had this issue.
         ![delete](readme_img/deleteurl_issue.png)
+        * Whilst creating the contact page, I had this issue, tutor support helped me in identifying I had a url typo.
+        ![template](readme_img/contact-error.png)
 
         
 * # Technologies Used
@@ -247,7 +272,8 @@
         * [geeksforgeeks](https://www.geeksforgeeks.org/)
 
 * # Deployments
-* Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, To live preview my project, I used Heroku.
+* Git and GitHub are used for version control. Python is the backend language, and can't be displayed with GitHub alone, 
+To live preview my project, I used Heroku.
 
 * ## Heroku
     * ### Deployment Steps On Heroku.
