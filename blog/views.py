@@ -117,8 +117,8 @@ def about(request):
     return render(request, "about.html")
 
 
-def contactus(request):
-    """
-    Render the contact page
-    """
-    return render(request, template)
+# def contactus(request):
+#     """
+#     Render the contact page
+#     """
+#     return render(request, "contact_us.html")

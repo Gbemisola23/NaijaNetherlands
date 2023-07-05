@@ -13,4 +13,4 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return f"Message {self.topic} from {self.name}"
-
+           
