@@ -161,3 +161,6 @@ body {
     border: none;
 }
 
+.send-message:hover {
+    color: #000;
+}

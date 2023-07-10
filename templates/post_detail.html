@@ -69,7 +69,7 @@
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="comment_section">
         <div class="col-md-8 card mb-4  mt-3 ">
             {% if not user.is_authenticated %} 
             <h6> Please sign in to leave a comment.</h6>
@@ -95,14 +95,14 @@
                                 <ul class="dropdown-menu"> 
                                   <li>
                                     <a
-                                      href="{% url 'edit_comment' post.slug comment.id %}"
+                                      href="{% url 'edit_comment' post.slug comment.id %}#comment_section"
                                       class="dropdown-item"
                                       >Edit</a
                                     >
                                   </li>
                                   <li>
                                     <a
-                                      href="{% url 'delete_comment' post.slug comment.id %}"
+                                      href="{% url 'delete_comment' post.slug comment.id %}#comment_section"
                                       class="dropdown-item"
                                       >Delete</a
                                     >
@@ -121,7 +121,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-4 card mb-4  mt-3" id="comment">
             <div class="card-body">
                 <!-- Comment Alert -->
                 {% if commented %}
@@ -133,11 +133,10 @@
 
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post" action="#comment_section" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    
                 </form>
                 {% endif %}
                 {% endif %}
