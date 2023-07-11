@@ -120,11 +120,11 @@
 
             ![Comment Signin](readme_img/comment_signin.png)  
 
-        * Upon signup/signin the user can leave a comment.
+        * Upon signup/signin the user can create,edit or delete a comment.
             ![Comment Signin](readme_img/leave_comment.png)  
 
     * ### **Comment Approval**
-        * There is a notification that shows after the user has submitted a comment.
+        * There is a notification that shows after the user has submitted, edited and deleted comments.
 
             ![Comment Approval](readme_img/comment_approval.png)  
 
@@ -202,6 +202,15 @@
 | Login | Login to an account | login-in as a new user form works |  Pass |
 | Login as admin| Login to as admin gives access to blog/product management | login-in as a new user form works |  Pass |
 | Logout | message shown | Logging out message shown |  Pass |
+
+
+* # HTML VALIDATOR CHECKER
+The site was validated using html checker.
+
+![html checker](readme_img/naija_html_checker.png)
+
+* # CSS VALIDATOR CHECKER
+![css checker](readme_img/css_checker.png)
 
 
 * # Bugs
