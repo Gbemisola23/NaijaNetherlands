@@ -65,6 +65,7 @@ class PostDetail(View):
                 request.POST, request.FILES, instance=comment)
             if comment_form.is_valid():
                 comment_form.save()
+                messages.success(request, 'Comment has been updated.')
                 return HttpResponseRedirect(
                     reverse('post_detail', args=[slug]))
         else:
@@ -100,6 +101,7 @@ class DeleteComment(View):
         comment = Comment.objects.filter(pk=commentId).first()
         if (comment and comment.email == request.user.email):
             comment.delete()
+            messages.error(request, 'Comment has been deleted.')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
